@@ -5,16 +5,16 @@
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
+    "moduleResolution": "node",
     "downlevelIteration": true,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
     "importHelpers": true,
     "esModuleInterop": true,
     "target": "es2015",
     "module": "es2020",
     "lib": ["es2018", "dom"],
     "paths": {
-      "@ngx-storage": ["dist/ngx-storage/ngx-storage", "dist/ngx-storage"]
+      "@ngx-storage": ["./projects/ngx-storage/src/public-api.ts"]
     }
   }
 }
