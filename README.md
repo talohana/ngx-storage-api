@@ -27,14 +27,14 @@ yarn add ngx-storage-api
 In order to use `localStorage` or `sessionStorage` inject the desired service:
 
 ```typescript
-import { LocalStorageService } from 'ngx-storage-api';
+import { LocalStorageService, SessionStorageService } from 'ngx-storage-api';
 
 @Component({
   selector: 'app-my-component',
   template: ``,
   styles: [],
 })
-export class MyComponentComponent implements OnInit {
+export class MyComponent implements OnInit {
   constructor(
     private readonly localStorageService: LocalStorageService,
     private readonly sessionStorageService: SessionStorageService
