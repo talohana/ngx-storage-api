@@ -6,6 +6,8 @@ module.exports = {
   preset: 'jest-preset-angular',
   testMatch: ['**/+(*.)+(spec).+(ts)'],
   setupFilesAfterEnv: ['<rootDir>/test.ts'],
+  collectCoverage: true,
+  coverageDirectory: './coverage/',
   moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/',
   }),
