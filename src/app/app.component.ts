@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService, SessionStorageService } from '@ngx-storage';
+import { LocalStorageService, SessionStorageService } from 'ngx-storage';
 @Component({
   selector: 'app-root',
   template: ``,
