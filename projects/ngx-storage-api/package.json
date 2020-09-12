@@ -1,6 +1,6 @@
 {
   "name": "ngx-storage-api",
-  "version": "1.0.0",
+  "version": "0.0.0-semantically-released",
   "description": "A StorageAPI wrapper for Angular applications.",
   "publishConfig": {
     "access": "public"
@@ -8,6 +8,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/talohana/ngx-storage-api"
+  },
+  "scripts": {
+    "semantic-release": "semantic-release"
   },
   "keywords": [
     "angular",
