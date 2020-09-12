@@ -1,5 +1,5 @@
 <p align="center">
-    <img width="50%" height="50%" src="./logo.svg"></img>
+    <img width="50%" height="50%" src="https://raw.githubusercontent.com/talohana/ngx-storage-api/master/logo.svg"></img>
 </p>
 
 <hr />
