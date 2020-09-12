@@ -1,12 +1,12 @@
-import { pathsToModuleNameMapper } from 'ts-jest/utils';
-import { compilerOptions } from './tsconfig';
+/* eslint-disable @typescript-eslint/no-var-requires */
+const { pathsToModuleNameMapper } = require('ts-jest/utils');
+const { compilerOptions } = require('./tsconfig');
 
-export const preset = 'jest-preset-angular';
-export const testMatch = ['**/+(*.)+(spec).+(ts)'];
-export const setupFilesAfterEnv = ['<rootDir>/test.ts'];
-export const moduleNameMapper = pathsToModuleNameMapper(
-  compilerOptions.paths || {},
-  {
+module.exports = {
+  preset: 'jest-preset-angular',
+  testMatch: ['**/+(*.)+(spec).+(ts)'],
+  setupFilesAfterEnv: ['<rootDir>/test.ts'],
+  moduleNameMapper: pathsToModuleNameMapper(compilerOptions.paths || {}, {
     prefix: '<rootDir>/',
-  }
-);
+  }),
+};

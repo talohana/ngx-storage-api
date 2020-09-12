@@ -9,7 +9,11 @@ describe('StorageListenerService', () => {
     service = TestBed.inject(StorageListenerService);
   });
 
-  it('should be created', () => {
-    expect(service).toBeTruthy();
+  it('should listen for window storage events', () => {
+    fail();
+  });
+
+  it('should keep single subscription to storage events', () => {
+    fail();
   });
 });
