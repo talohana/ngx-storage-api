@@ -14,7 +14,7 @@ export class SessionStorageService extends StorageProxy {
 
   get sessionStorage$(): Observable<StorageEvent> {
     return this.storageListenerService.storage$.pipe(
-      filter(({ storageArea }) => storageArea === localStorage)
+      filter(event => event?.storageArea === sessionStorage)
     );
   }
 }

@@ -25,7 +25,7 @@ describe('StorageListenerService', () => {
 
   it('should listen for window storage events', () => {
     const event = new StorageEvent('storage');
-    const eventObs = hot('e', { e: event });
+    const eventObs = hot('-e-', { e: event });
 
     when(fromEvent as jest.Mock)
       .calledWith(window, 'storage')

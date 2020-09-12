@@ -15,10 +15,21 @@ describe('StorageProxy', () => {
       key: jest.fn(),
       removeItem: jest.fn(),
       setItem: jest.fn(),
-      length: 0,
+      get length() {
+        return 0;
+      },
     };
 
     proxy = new ProxyStub(storageMock);
+  });
+
+  it('should proxy length property', () => {
+    const getterSpy = jest.spyOn(storageMock, 'length', 'get');
+
+    /* eslint-disable-next-line @typescript-eslint/no-unused-vars */
+    const mockLength = proxy.length;
+
+    expect(getterSpy).toHaveBeenCalledTimes(1);
   });
 
   it('should proxy clear method', () => {
