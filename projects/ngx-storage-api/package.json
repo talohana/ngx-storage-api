@@ -1,9 +1,13 @@
 {
   "name": "ngx-storage-api",
-  "version": "0.0.4",
-  "description": "Storage library for Angular.",
+  "version": "0.0.5",
+  "description": "A StorageAPI wrapper for Angular applications.",
   "publishConfig": {
     "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/talohana/ngx-storage-api"
   },
   "keywords": [
     "angular",
