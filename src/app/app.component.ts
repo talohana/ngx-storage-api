@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalStorageService, SessionStorageService } from 'ngx-storage';
+import { LocalStorageService, SessionStorageService } from 'ngx-storage-api';
 @Component({
   selector: 'app-root',
-  template: ``,
+  template: `<img src="/assets/logo.svg" />`,
   styles: [],
 })
 export class AppComponent implements OnInit {

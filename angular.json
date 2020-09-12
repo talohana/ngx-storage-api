@@ -6,45 +6,45 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "ngx-storage": {
+    "ngx-storage-api": {
       "projectType": "library",
-      "root": "projects/ngx-storage",
-      "sourceRoot": "projects/ngx-storage/src",
+      "root": "projects/ngx-storage-api",
+      "sourceRoot": "projects/ngx-storage-api/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "tsConfig": "projects/ngx-storage/tsconfig.lib.json",
-            "project": "projects/ngx-storage/ng-package.json"
+            "tsConfig": "projects/ngx-storage-api/tsconfig.lib.json",
+            "project": "projects/ngx-storage-api/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/ngx-storage/tsconfig.lib.prod.json"
+              "tsConfig": "projects/ngx-storage-api/tsconfig.lib.prod.json"
             }
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ngx-storage/src/test.ts",
-            "tsConfig": "projects/ngx-storage/tsconfig.spec.json",
-            "karmaConfig": "projects/ngx-storage/karma.conf.js"
+            "main": "projects/ngx-storage-api/src/test.ts",
+            "tsConfig": "projects/ngx-storage-api/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-storage-api/karma.conf.js"
           }
         },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "projects/ngx-storage/tsconfig.lib.json",
-              "projects/ngx-storage/tsconfig.spec.json"
+              "projects/ngx-storage-api/tsconfig.lib.json",
+              "projects/ngx-storage-api/tsconfig.spec.json"
             ],
             "exclude": ["**/node_modules/**"]
           }
         }
       }
     },
-    "ngx-storage-app": {
+    "ngx-storage-api-app": {
       "projectType": "application",
       "root": "",
       "sourceRoot": "src",
@@ -53,7 +53,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/ngx-storage-app",
+            "outputPath": "dist/ngx-storage-api-app",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -97,18 +97,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ngx-storage-app:build"
+            "browserTarget": "ngx-storage-api-app:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "ngx-storage-app:build:production"
+              "browserTarget": "ngx-storage-api-app:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "ngx-storage-app:build"
+            "browserTarget": "ngx-storage-api-app:build"
           }
         },
         "lint": {
@@ -121,5 +121,5 @@
       }
     }
   },
-  "defaultProject": "ngx-storage"
+  "defaultProject": "ngx-storage-api"
 }

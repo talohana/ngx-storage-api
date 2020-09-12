@@ -4,22 +4,20 @@
 
 <hr />
 
-[![Build Status](https://travis-ci.org/talohana/ngx-storage.svg?branch=master)](https://travis-ci.org/talohana/ngx-storage)
-
-`ngx-storage` is a simple wrapper above `localStorage` and `sessionStorage` in a shape of Angular services.
+`ngx-storage-api` is a simple wrapper above `localStorage` and `sessionStorage` in a shape of Angular services.
 
 ## Installation
 
-To use `ngx-storage` in your project install it via npm:
+To use `ngx-storage-api` in your project install it via npm:
 
 ```
-npm i ngx-storage
+npm i ngx-storage-api
 ```
 
 or using yarn:
 
 ```
-yarn add ngx-storage
+yarn add ngx-storage-api
 ```
 
 ## Usage
@@ -27,7 +25,7 @@ yarn add ngx-storage
 In order to use `localStorage` or `sessionStorage` inject the desired service:
 
 ```typescript
-import { LocalStorageService } from 'ngx-storage';
+import { LocalStorageService } from 'ngx-storage-api';
 
 @Component({
   selector: 'app-my-component',

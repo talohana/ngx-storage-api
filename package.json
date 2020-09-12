@@ -1,17 +1,17 @@
 {
-  "name": "ngx-storage",
+  "name": "ngx-storage-api",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:app": "ng serve ngx-storage-app",
+    "start:app": "ng serve ngx-storage-api-app",
     "test": "jest --config jest.config.js",
     "test:watch": "jest --config jest.config.js --watch",
     "test:ci": "jest --config jest.config.js --runInBand",
     "lint": "eslint . --ext .js,.ts",
     "lint:fix": "npm run lint -- --fix",
     "prettier": "prettier --write",
-    "build:lib": "ng build --prod ngx-storage",
-    "copy-files": "cp -t dist/ngx-storage README.md LICENSE",
+    "build:lib": "ng build --prod ngx-storage-api",
+    "copy-files": "cp -t dist/ngx-storage-api README.md LICENSE",
     "package": "run-s clean build:lib copy-files",
     "clean": "rimraf dist"
   },
