@@ -8,6 +8,10 @@ notifications:
     on_success: never
     on_failure: always
 
+script:
+  - npm run test:ci
+  - npm run package
+
 jobs:
   include:
     # Define the release stage that runs semantic-release

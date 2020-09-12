@@ -1,6 +1,6 @@
 {
   "name": "ngx-storage-api",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "private": true,
   "scripts": {
     "ng": "ng",

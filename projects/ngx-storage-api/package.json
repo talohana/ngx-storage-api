@@ -1,6 +1,6 @@
 {
   "name": "ngx-storage-api",
-  "version": "0.0.0-semantically-released",
+  "version": "0.0.0-development",
   "description": "A StorageAPI wrapper for Angular applications.",
   "publishConfig": {
     "access": "public"
