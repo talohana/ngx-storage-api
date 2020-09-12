@@ -12,6 +12,13 @@ export class LocalStorageService extends StorageProxy {
     super(localStorage);
   }
 
+  /**
+   * Listens for `localStorage` StorageEvent events
+   *
+   * @returns
+   * An Observable which listens to `window` storage events, and filters
+   * those which relevant to `localStorage`
+   */
   get localStorage$(): Observable<StorageEvent> {
     return this.storageListenerService.storage$.pipe(
       filter(event => event?.storageArea === localStorage)
