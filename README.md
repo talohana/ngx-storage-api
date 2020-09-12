@@ -1,27 +1,51 @@
-# NgxStorage
+<p align="center">
+    <img width="50%" height="50%" src="./logo.svg"></img>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 10.1.1.
+<hr />
 
-## Development server
+`ngx-storage` is a simple wrapper above `localStorage` and `sessionStorage` in a shape of Angular services.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Installation
 
-## Code scaffolding
+To use `ngx-storage` in your project install it via npm:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```
+npm i ngx-storage
+```
 
-## Build
+or using yarn:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```
+yarn add ngx-storage
+```
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+In order to use `localStorage` or `sessionStorage` inject the desired service:
 
-## Running end-to-end tests
+```typescript
+import { LocalStorageService } from 'ngx-storage';
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+@Component({
+  selector: 'app-my-component',
+  template: ``,
+  styles: [],
+})
+export class MyComponentComponent implements OnInit {
+  constructor(
+    private readonly localStorageService: LocalStorageService,
+    private readonly sessionStorageService: SessionStorageService
+  ) {}
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  ngOnInit(): void {
+    this.localStorageService.clear();
+    this.localStorageService.setItem('hello', 'world');
+    this.localStorageService.getItem('hello');
+    this.localStorageService.removeItem('hello');
+    this.localStorageService.localStorage$.subscribe((e: StorageEvent) => {
+      console.log('localStorage changed!', e);
+    });
+  }
+}
+```

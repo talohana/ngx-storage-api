@@ -12,12 +12,12 @@ export class AppComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.localStorageService.localStorage$.subscribe(e =>
-      console.log('LocalStorage: ', e)
-    );
-
-    this.sessionStorageService.sessionStorage$.subscribe(e =>
-      console.log('SessionStorage: ', e)
-    );
+    this.localStorageService.clear();
+    this.localStorageService.setItem('hello', 'world');
+    this.localStorageService.getItem('hello');
+    this.localStorageService.removeItem('hello');
+    this.localStorageService.localStorage$.subscribe((e: StorageEvent) => {
+      console.log('localStorage changed!', e);
+    });
   }
 }
