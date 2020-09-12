@@ -4,7 +4,7 @@
 
 <hr />
 
-[![Build Status](https://travis-ci.org/talohana/ngx-storage-api.svg?branch=master)](https://travis-ci.org/talohana/ngx-storage-api)
+[![Build Status](https://travis-ci.com/talohana/ngx-storage-api.svg?branch=master)](https://travis-ci.com/talohana/ngx-storage-api)
 
 `ngx-storage-api` is a simple wrapper above `localStorage` and `sessionStorage` in a shape of Angular services.
 

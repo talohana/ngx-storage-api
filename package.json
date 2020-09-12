@@ -1,6 +1,7 @@
 {
   "name": "ngx-storage-api",
   "version": "0.0.0",
+  "private": true,
   "scripts": {
     "ng": "ng",
     "commit": "git-cz",
@@ -16,7 +17,11 @@
     "package": "run-s clean build:lib copy-files",
     "clean": "rimraf dist"
   },
-  "private": true,
+  "config": {
+    "commitizen": {
+      "path": "@commitlint/prompt"
+    }
+  },
   "dependencies": {
     "@angular/animations": "~10.1.1",
     "@angular/common": "~10.1.1",
