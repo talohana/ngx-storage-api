@@ -1,3 +1,6 @@
+import { Directive } from '@angular/core';
+
+@Directive()
 export abstract class StorageProxy implements Storage {
   constructor(private readonly storage: Storage) {}
 
