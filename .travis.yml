@@ -8,8 +8,12 @@ notifications:
     on_success: never
     on_failure: always
 
+install:
+  - npm install -g codecov
+
 script:
   - npm run test:ci
+  - codecov
   - npm run package
 
 jobs:
