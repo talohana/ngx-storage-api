@@ -8,7 +8,7 @@
 
 `ngx-storage-api` is a simple wrapper above `localStorage` and `sessionStorage` in a shape of Angular services.
 
-Play with a live demo [in this stackblitz](https://stackblitz.com/edit/angular-ivy-yuca22?file=src%2Fapp%2Fapp.component.ts)
+Play with a live demo [in this stackblitz](https://stackblitz.com/edit/ngx-storage-api)
 
 ## Installation
 
