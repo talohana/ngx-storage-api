@@ -9,6 +9,9 @@ notifications:
     on_success: never
     on_failure: always
 
+cache:
+  yarn: true
+
 install:
   - yarn
   - yarn global add codecov
