@@ -10,7 +10,7 @@ notifications:
 
 install:
   - yarn
-  - yarn add -g codecov
+  - yarn global add codecov
 
 script:
   - yarn test:ci
