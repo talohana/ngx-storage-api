@@ -9,12 +9,13 @@ notifications:
     on_failure: always
 
 install:
-  - npm install -g codecov
+  - yarn
+  - yarn add -g codecov
 
 script:
-  - npm run test:ci
+  - yarn test:ci
   - codecov
-  - npm run package
+  - yarn package
 
 jobs:
   include:
@@ -27,4 +28,4 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npx semantic-release
+          - yarn semantic-release
