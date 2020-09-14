@@ -5,16 +5,21 @@ node_js:
 
 notifications:
   email:
+    if: branch = master
     on_success: never
     on_failure: always
 
+cache:
+  yarn: true
+
 install:
-  - npm install -g codecov
+  - yarn
+  - yarn global add codecov
 
 script:
-  - npm run test:ci
+  - yarn test:ci
   - codecov
-  - npm run package
+  - yarn package
 
 jobs:
   include:
@@ -27,4 +32,4 @@ jobs:
         provider: script
         skip_cleanup: true
         script:
-          - npx semantic-release
+          - yarn semantic-release
