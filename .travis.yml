@@ -13,7 +13,7 @@ cache:
   yarn: true
 
 install:
-  - yarn
+  - yarn --frozen-lockfile
   - yarn global add codecov
 
 script:
